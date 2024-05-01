@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Music app</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <style>
+      /*styling for sign-up and login forms*/  
+      body {
+          background-color: #343a40;
+          color: #fff;
+      }
+      .form-control {
+        background-color: #454d55;
+        color: #fff;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+      }
+      /*-----------------------------------------*/
+
+      /*a space css*/
+      .spacer {
+        margin-right: 20px; /* Adjust the value as needed */
+      }
+      /*------------------------------------------*/
+
+      /*styling for the base home page*/
+      .main-content-space {
+        padding-left: 35px;
+        margin-left: 35px;
+      }
+      .sidebar-scroll,
+        .main-content-scroll {
+            overflow-y: auto;
+            max-height: 100vh;
+      }
+      .sidebar-scroll::-webkit-scrollbar,
+        .main-content-scroll::-webkit-scrollbar {
+            width: 0;  /* This will hide the scrollbar */
+      }  
+      .bg-secondary.text-light {
+          /* Example styling for sidebar background color and text color */
+          background-color: #343a40 !important;
+          color: #ffffff !important;
+      }
+      /*--------------------------------------------------------------------------*/
+      
+      /*Styling for Creator Studio*/
+      body {
+            background-color: #343a40;
+            color: #fff;
+      }
+      /*.creator_sidebar {
+            background-color: #212529;
+            min-height: 100vh;
+      }
+      .creator_main-content {
+            padding: 20px;
+      }*/
+      /*------------------------------------------------------------*/
+
+      /*Styling for Music bar*/
+      .music-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+      }
+
+      .music-controls {
+        display: flex;
+        align-items: center;
+      }
+
+      /*.progress-bar {
+        height: 5px;
+        background-color: #ccc;
+        margin-top: 5px;
+      }
+
+      .progress {
+        height: 100%;
+        background-color: #ff5722;
+      }*/
+      .seek-bar {
+        flex-grow: 1;
+        margin: 0 10px;
+        width: auto;
+      }
+      /*------------------------------------*/
+
+      .flag-link {
+        text-decoration: none; /* Remove default underline for links */
+        color: inherit; /* Inherit text color from parent */
+      }
+
+      .dropdown-toggle {
+        color: inherit; /* Inherit text color from parent */
+        text-decoration: none; /* Remove default underline for links */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <navbar></navbar>
+      <router-view></router-view>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue-router@4.0.15/dist/vue-router.global.js"></script>
+    <script
+      src="{{url_for('static', filename='index.js')}}"
+      type="module"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+  
+</html>     
